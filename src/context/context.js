@@ -11,13 +11,11 @@ const GithubContext = createContext();
 // provider , consumer
 const GithubProvider = ({ children }) => {
   const [githubUser, setGithubUser] = useState(mockUser);
-  const [githubRepos, setGithubRepos] = useState(mockRepos);
-  const [githubFollowers, setGithubFollowers] = useState(mockFollowers);
+  const [repos, setRepos] = useState(mockRepos);
+  const [followers, setFollowers] = useState(mockFollowers);
 
   return (
-    <GithubContext.Provider
-      value={{ githubUser, githubRepos, githubFollowers }}
-    >
+    <GithubContext.Provider value={{ githubUser, repos, followers }}>
       {children}
     </GithubContext.Provider>
   );
