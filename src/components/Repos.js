@@ -49,7 +49,7 @@ const Repos = () => {
       forks: {},
     }
   );
-  console.log(repos);
+
   stars = Object.values(stars).slice(-5).reverse();
   forks = Object.values(forks).slice(-5).reverse();
   return (
