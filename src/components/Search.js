@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { MdSearch } from "react-icons/md";
 import { GithubContext } from "../context/context";
 import axios from "axios";
+
 const Search = () => {
   // ¸get things from global
   const { request, error, searchGithubUser, isLoading } =
