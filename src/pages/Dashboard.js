@@ -10,10 +10,7 @@ const Dashboard = () => {
       <main>
         <Navbar />
         <Search />
-        <div style={{ width: "25em", margin: "0 auto", textAlign: "center" }}>
-          {" "}
-          <img src={loadingImage} alt="loading" />
-        </div>
+        <img src={loadingImage} className="loading-img" alt="loding" />
       </main>
     );
   }

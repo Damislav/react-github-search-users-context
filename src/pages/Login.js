@@ -9,9 +9,9 @@ const Login = () => {
     <Wrapper>
       <div className="container">
         <img src={loginImg} alt="github user" />
-        <h1>github user </h1>
+        <h1>github user</h1>
         <button className="btn" onClick={loginWithRedirect}>
-          Login / Sign Up
+          Log In / Sign Up
         </button>
       </div>
     </Wrapper>

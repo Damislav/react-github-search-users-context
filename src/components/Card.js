@@ -23,22 +23,20 @@ const Card = () => {
           <p>@{twitter_username || "john doe"}</p>
         </div>
         <a href={html_url}>follow</a>
-        <p className="bio">{bio} </p>
-        <div className="links">
-          <p>
-            <MdBusiness />
-            {company}
-          </p>{" "}
-          <p>
-            <MdLocationOn />
-            {location || "earth"}
-          </p>
-          <a href={`https://${blog}/`}>
-            <MdLink />
-            {blog}
-          </a>
-        </div>
       </header>
+      <p className="bio">{bio}</p>
+      <div className="links">
+        <p>
+          <MdBusiness></MdBusiness> {company}
+        </p>
+        <p>
+          <MdLocationOn></MdLocationOn> {location || "earth"}
+        </p>
+        <a href={`https://${blog}`}>
+          <MdLink></MdLink>
+          {blog}
+        </a>
+      </div>
     </Wrapper>
   );
 };

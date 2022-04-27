@@ -2,22 +2,21 @@ import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import { MdSearch } from "react-icons/md";
 import { GithubContext } from "../context/context";
-import axios from "axios";
 
 const Search = () => {
-  // ¸get things from global
-  const { request, error, searchGithubUser, isLoading } =
-    useContext(GithubContext);
   const [user, setUser] = useState("");
-
-  const handleSubmit = async (e) => {
+  const { requests, error, searchGithubUser, isLoading } =
+    useContext(GithubContext);
+  // get things from global context
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (user) {
+      // more logic coming up soon
       searchGithubUser(user);
-      setUser("");
+      //optional
+      // setUser('');
     }
   };
-
   return (
     <section className="section">
       <Wrapper className="section-center">
@@ -29,17 +28,18 @@ const Search = () => {
         <form onSubmit={handleSubmit}>
           <div className="form-control">
             <MdSearch />
-
             <input
+              type="text"
+              placeholder="enter github user"
               value={user}
               onChange={(e) => setUser(e.target.value)}
-              type="text"
-              placeholder="Please enter github user"
             />
-            {request > 0 && !isLoading && <button>search</button>}
+            {requests > 0 && !isLoading && (
+              <button type="submit">search</button>
+            )}
           </div>
         </form>
-        <h3>request: {request && request}/60</h3>
+        <h3>requests : {requests} / 60</h3>
       </Wrapper>
     </section>
   );
@@ -91,7 +91,6 @@ const Wrapper = styled.div`
         color: var(--clr-primary-1);
       }
     }
-
     svg {
       color: var(--clr-grey-5);
     }
