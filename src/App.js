@@ -25,11 +25,3 @@ function App() {
 }
 
 export default App;
-
-// <Router>
-//     <Switch>
-//       <PrivateRoute exact path="/"></PrivateRoute>
-//       <Route exact path="/login" component={Login} />
-//       <Route path="/*" component={Error} />
-//     </Switch>
-//   </Router>
