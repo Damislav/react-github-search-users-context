@@ -1,4 +1,4 @@
-## Starter Project
+ Search anybody on github and get detailed information about him.
 
 - css provided (global styles, styled components)
 - folders/files already setup
